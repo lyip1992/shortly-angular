@@ -1,4 +1,13 @@
+angular.module('components', [])
+  .directive('shortenedLink', function () {
+    return {
+      restrict: 'E',
+      templateUrl: 'app/templates/shortenedLink.html'
+    };
+  })
+
 angular.module('shortly', [
+  'components',
   'shortly.services',
   'shortly.links',
   'shortly.shorten',
@@ -66,3 +75,5 @@ angular.module('shortly', [
     }
   });
 });
+
+
