@@ -1,4 +1,25 @@
-body {
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav {
+  margin-bottom: 15px;
+}
+
+.link-icon {
+  position: relative;
+  top: -15px;
+}
+
+.link-content {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+/*PREVIOUS STYLING*/
+/*body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
@@ -144,5 +165,5 @@ input[type=url]:focus {
 
 .creator .message {
   clear: both;
-}
+}*/
 

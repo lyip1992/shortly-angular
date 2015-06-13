@@ -1,12 +1,16 @@
-<div id='container'>
-  <h1>Links</h1>
+<div id='container' class='row'>
   <div ng-controller='LinksController'>
     Search: <input ng-model="query">
+    <h1>Links</h1>
     <ul>
-      <li ng-repeat="link in data.links | orderBy:'-visits' | filter:query" >
-        <p>{{ link.title }}</p>
-        <a href="/{{link.code}}">{{link.base_url + link.code }}</span> |
-        <span>visits: {{ link.visits }}</span>
+      <li ng-repeat="link in data.links | orderBy:'-visits' | filter:query"
+        class="well">
+        <img class="link-icon" src="../assets/redirect_icon.png">
+        <div class="link-content">
+          <p>{{ link.title }}</p>
+          <a href="/{{link.code}}">{{link.base_url + '/' + link.code }}</a> |
+          <span>visits: {{ link.visits }}</span>
+        </div>
       </li>
     </ul>
   </div>
