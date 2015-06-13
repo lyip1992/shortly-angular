@@ -1,11 +1,12 @@
 <div id='container'>
   <h1>Links</h1>
   <div ng-controller='LinksController'>
+    Search: <input ng-model="query">
     <ul>
-      <li ng-repeat="link in data.links">
-        <span>{{ link.title }}</span> |
-        <a href="/code">{{ link.code }}</span> |
-        <span>{{ link.visits }}</span>
+      <li ng-repeat="link in data.links | orderBy:'-visits' | filter:query" >
+        <p>{{ link.title }}</p>
+        <a href="/{{link.code}}">{{link.base_url + link.code }}</span> |
+        <span>visits: {{ link.visits }}</span>
       </li>
     </ul>
   </div>
