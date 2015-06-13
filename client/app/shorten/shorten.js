@@ -14,4 +14,13 @@ angular.module('shortly.shorten', [])
         console.error(error);
       });
   };
+
+  $scope.submitForm = function (isValid) {
+    if (isValid) {
+      $scope.addLink();
+    } else {
+      alert('Please enter valid URL');
+    }
+  };
+
 });

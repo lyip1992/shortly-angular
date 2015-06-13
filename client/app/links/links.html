@@ -4,7 +4,8 @@
     <ul>
       <li ng-repeat="link in data.links">
         <span>{{ link.title }}</span> |
-        <span>{{ link.url }}</span>
+        <a href="/code">{{ link.code }}</span> |
+        <span>{{ link.visits }}</span>
       </li>
     </ul>
   </div>

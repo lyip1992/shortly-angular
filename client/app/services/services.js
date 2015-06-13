@@ -22,9 +22,20 @@ angular.module('shortly.services', [])
     });
   };
 
+  var goToCode = function(link) {
+    return $http({
+      method: 'GET',
+      url: '/api/code',
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
   return {
     getLinks: getLinks,
-    addLink: addLink
+    addLink: addLink,
+    goToCode: goToCode
   };
 
 })
