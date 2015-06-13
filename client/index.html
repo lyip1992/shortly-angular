@@ -13,16 +13,17 @@
 
       <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
       <div class='nav'>
-        <a href='#/signin'>Sign In</a> |
-        <a href='#/signup'>Sign Up</a> |
-        <a href='#/shorten'>Shorten</a> |
-        <a href='#/links'>Links</a>
+        <a ui-sref='signin'>Sign In</a> |
+        <a ui-sref='signup'>Sign Up</a> |
+        <a ui-sref='shorten'>Shorten</a> |
+        <a ui-sref='links'>Links</a>
       </div>
 
-      <div ng-view></div>
+      <div ui-view></div>
 
       <script src="lib/angular/angular.js"></script>
-      <script src="lib/angular-route/angular-route.js"></script>
+      <!-- <script src="lib/angular-route/angular-route.js"></script> -->
+      <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
       <script src="app/auth/auth.js"></script>
       <script src="app/links/links.js"></script>
